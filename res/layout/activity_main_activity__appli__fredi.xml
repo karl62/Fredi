@@ -74,9 +74,8 @@
             android:id="@+id/btnValider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/txtAdresse"
+            android:layout_alignLeft="@+id/txtPrenom"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="14dp"
             android:text="@string/Valider" />
 
 </RelativeLayout>
