@@ -4,5 +4,9 @@
     <string name="app_name">Appli_Fredi</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="Nom">nom : </string>
+    <string name="Prenom">prenom : </string>
+    <string name="Adresse">adresse : </string>
+    <string name="Valider">Valider</string>
 
 </resources>
