@@ -8,5 +8,6 @@
     <string name="Prenom">prenom : </string>
     <string name="Adresse">adresse : </string>
     <string name="Valider">Valider</string>
+    <string name="title_activity_my_sqlite_helper">MySQLiteHelper</string>
 
 </resources>
