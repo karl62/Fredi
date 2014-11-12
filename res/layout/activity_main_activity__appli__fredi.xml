@@ -8,74 +8,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.appli_fredi.MainActivity_Appli_Fredi" >
 
-    <TextView
-        android:id="@+id/txtNom"
+    <requestFocus />
+
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="@string/Nom"
-        android:textSize="@dimen/Grand" />
+        android:layout_marginTop="80dp"
+        android:text="Se connecter" />
 
-        <requestFocus />
-
-        <EditText
-            android:id="@+id/edtNom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtNom"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="14dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:id="@+id/txtPrenom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edtNom"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:text="@string/Prenom"
-            android:textSize="@dimen/Grand" />
-
-        <EditText
-            android:id="@+id/edtPrenom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtPrenom"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:id="@+id/txtAdresse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edtPrenom"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="62dp"
-            android:text="@string/Adresse"
-            android:textSize="@dimen/Grand" />
-
-        <EditText
-            android:id="@+id/edtAdresse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtAdresse"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            android:ems="10"
-            android:inputType="textPostalAddress" />
-
-        <Button
-            android:id="@+id/btnValider"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/txtPrenom"
-            android:layout_alignParentBottom="true"
-            android:text="@string/Valider" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="S&apos;inscrire" />
 
 </RelativeLayout>
