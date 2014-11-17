@@ -30,6 +30,10 @@
             android:name=".Login"
             android:label="@string/title_activity_login" >
         </activity>
+        <activity
+            android:name=".Simuler_montant"
+            android:label="@string/title_activity_simuler_montant" >
+        </activity>
     </application>
 
 </manifest>

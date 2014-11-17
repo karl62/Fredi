@@ -248,7 +248,7 @@ int id action_context_bar 0x7f09001d
 int id action_menu_divider 0x7f090002
 int id action_menu_presenter 0x7f090003
 int id action_mode_close_button 0x7f090024
-int id action_settings 0x7f090048
+int id action_settings 0x7f09004c
 int id activity_chooser_view_content 0x7f090025
 int id always 0x7f09000f
 int id beginning 0x7f090016
@@ -262,7 +262,8 @@ int id dialog 0x7f090014
 int id disableHome 0x7f090009
 int id dropdown 0x7f090015
 int id editTextIdentifiant 0x7f09003d
-int id editTextMdp 0x7f090045
+int id editTextMdp 0x7f090044
+int id editTextTarifKilo 0x7f090049
 int id edit_query 0x7f090030
 int id edtAdresse 0x7f090041
 int id edtPrenom 0x7f09003f
@@ -301,7 +302,10 @@ int id split_action_bar 0x7f09001e
 int id submit_area 0x7f090039
 int id tabMode 0x7f090008
 int id textViewIdentifiant 0x7f090043
-int id textViewMdp 0x7f090044
+int id textViewMdp 0x7f090045
+int id textViewMontant 0x7f09004a
+int id textViewResultatMontant 0x7f09004b
+int id textViewTarifKilo 0x7f090048
 int id title 0x7f09002b
 int id top_action_bar 0x7f090020
 int id txtAdresse 0x7f090040
@@ -338,10 +342,12 @@ int layout abc_simple_decor 0x7f030017
 int layout activity_inscription 0x7f030018
 int layout activity_login 0x7f030019
 int layout activity_main_activity__appli__fredi 0x7f03001a
-int layout support_simple_spinner_dropdown_item 0x7f03001b
+int layout activity_simuler_montant 0x7f03001b
+int layout support_simple_spinner_dropdown_item 0x7f03001c
 int menu login 0x7f0c0000
 int menu main_activity__appli__fredi 0x7f0c0001
 int menu my_sqlite_helper 0x7f0c0002
+int menu simuler_montant 0x7f0c0003
 int string Adresse 0x7f0a0012
 int string Nom 0x7f0a0010
 int string Prenom 0x7f0a0011
@@ -362,9 +368,12 @@ int string abc_shareactionprovider_share_with_application 0x7f0a000b
 int string action_settings 0x7f0a000f
 int string app_name 0x7f0a000d
 int string hello_world 0x7f0a000e
+int string montant 0x7f0a0019
 int string mot_de_passe 0x7f0a0016
+int string tarif_kilometrique 0x7f0a0018
 int string title_activity_login 0x7f0a0015
 int string title_activity_my_sqlite_helper 0x7f0a0014
+int string title_activity_simuler_montant 0x7f0a0017
 int style AppBaseTheme 0x7f0b008b
 int style AppTheme 0x7f0b008c
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0b0063

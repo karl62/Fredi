@@ -11,5 +11,8 @@
     <string name="title_activity_my_sqlite_helper">MySQLiteHelper</string>
     <string name="title_activity_login">Login</string>
     <string name="mot_de_passe">"Mot de passe : "</string>
+    <string name="title_activity_simuler_montant">Simuler_montant</string>
+    <string name="tarif_kilometrique">"Tarif kilométrique : "</string>
+    <string name="montant">"Montant : "</string>
 
 </resources>
