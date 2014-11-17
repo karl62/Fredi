@@ -4,10 +4,12 @@
     <string name="app_name">Appli_Fredi</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="Nom">nom : </string>
-    <string name="Prenom">prenom : </string>
-    <string name="Adresse">adresse : </string>
+    <string name="Nom">Nom : </string>
+    <string name="Prenom">Prénom : </string>
+    <string name="Adresse">Adresse : </string>
     <string name="Valider">Valider</string>
     <string name="title_activity_my_sqlite_helper">MySQLiteHelper</string>
+    <string name="title_activity_login">Login</string>
+    <string name="mot_de_passe">"Mot de passe : "</string>
 
 </resources>
