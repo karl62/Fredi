@@ -40,15 +40,6 @@
         android:ems="10"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/buttonValider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextMdp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
-        android:text="@string/Valider" />
-
     <TextView
         android:id="@+id/textViewMdp"
         android:layout_width="wrap_content"
@@ -57,5 +48,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp"
         android:text="@string/mot_de_passe" />
+
+    <Button
+        android:id="@+id/buttonValider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextMdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/Valider" />
 
 </RelativeLayout>
