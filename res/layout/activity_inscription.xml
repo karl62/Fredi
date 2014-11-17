@@ -43,4 +43,10 @@
         android:layout_height="wrap_content"
         android:ems="10" />
 
+    <Button
+        android:id="@+id/btnValider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Valider" />
+
 </LinearLayout>
