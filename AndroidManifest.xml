@@ -34,6 +34,8 @@
             android:name=".Simuler_montant"
             android:label="@string/title_activity_simuler_montant" >
         </activity>
+<activity android:name=".Login" />
+<activity android:name=".Inscription" />
     </application>
 
 </manifest>

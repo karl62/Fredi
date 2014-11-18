@@ -1,9 +1,15 @@
 package com.example.appli_fredi;
 
+
+
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainActivity_Appli_Fredi extends ActionBarActivity {
 
@@ -11,6 +17,25 @@ public class MainActivity_Appli_Fredi extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_activity__appli__fredi);
+		final Button loginButton = (Button) findViewById(R.id.btnValider);
+		final Button inscriptionButton = (Button) findViewById(R.id.btnInscrire);
+	    // Code pour passer a une vue.   
+		loginButton.setOnClickListener(new OnClickListener() {
+	    	   
+	    	 public void onClick(View v){
+	    		 Intent intent = new Intent(MainActivity_Appli_Fredi.this, Login.class);
+	    		 startActivity(intent);
+	    	 }
+	       });
+		 // Code pour passer a une vue. 
+	       inscriptionButton.setOnClickListener(new OnClickListener() {
+	    	   
+		    	 public void onClick(View v){
+		    		 Intent intent = new Intent(MainActivity_Appli_Fredi.this, Inscription.class);
+		    		 startActivity(intent);
+		    	 }
+		       });
+	       
 	}
 
 	@Override
