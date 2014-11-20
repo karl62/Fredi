@@ -1,16 +1,38 @@
 package com.example.appli_fredi;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class Inscription extends ActionBarActivity {
-
+	BdSQLiteOpenHelper accesBD;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_inscription);
+		accesBD = new BdSQLiteOpenHelper(this,"utilisateurs", null, 1);
+		EditText edtNom = (EditText)findViewById(R.id.editTextIdentifiant);
+		EditText edtPrenom = (EditText)findViewById(R.id.edtPrenom);
+		EditText edtAdresse = (EditText)findViewById(R.id.edtAdresse);
+        Button loginButton = (Button) findViewById(R.id.btnValider);
+       loginButton.setOnClickListener(new OnClickListener() {
+    	   
+    	 public void onClick(View v){
+    		 //ajoutUtilisateur();
+    	 }
+       });
+		
 	}
 
 	@Override
@@ -31,4 +53,18 @@ public class Inscription extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	public void ajoutUtilisateur(){
+		SQLiteDatabase db = accesBD.getWritableDatabase();
+		
+		ContentValues values = new ContentValues();
+		values.put("nom", "Seil");
+		values.put("prenom", "karl");
+		values.put("adresse", "test");
+		db.insert("utilisateurs",null, values);
+		
+		
+		
+		//Toast.makeText(Inscription.this, "ok", Toast.LENGTH_LONG).show();
+		
+		 }
 }
