@@ -10,21 +10,4 @@
 
     <requestFocus />
 
-    <Button
-        android:id="@+id/btnValider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:text="Se connecter" />
-
-    <Button
-        android:id="@+id/btnInscrire"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="S&apos;inscrire" />
-
 </RelativeLayout>
