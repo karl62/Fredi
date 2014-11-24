@@ -20,10 +20,6 @@ public class MainActivity_Appli_Fredi extends ActionBarActivity {
 		final Button loginButton = (Button) findViewById(R.id.btnValider);
 		final Button inscriptionButton = (Button) findViewById(R.id.btnInscrire);
 		
-		UtilisateurDAO vitis = new UtilisateurDAO(this);
-				
-			
-		
 	    // Code pour passer a une vue.   
 		loginButton.setOnClickListener(new OnClickListener() {
 	    	   
