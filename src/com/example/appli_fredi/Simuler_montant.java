@@ -4,13 +4,36 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Simuler_montant extends ActionBarActivity {
+
+	private double prixKm = 0.28;
+	private double montant = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_simuler_montant);
+
+		Button btnValider = (Button) findViewById(R.id.btnValider);
+
+		btnValider.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				EditText edtKm = (EditText) findViewById(R.id.edtNbKms);
+				TextView Montant = (TextView) findViewById(R.id.textViewMontant);
+				montant = Double.parseDouble(edtKm.getText().toString());
+				montant = montant * prixKm;
+				Montant.setText("Montant : " + Double.toString(montant));
+			}
+		});
+
 	}
 
 	@Override
