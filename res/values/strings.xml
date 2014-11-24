@@ -18,5 +18,8 @@
     <string name="ajouter_deplacement">Ajouter un déplacement</string>
     <string name="consulter_deplacements">Consulter les déplacements</string>
     <string name="simuler_montant_remboursements">Simuler le montant des remboursements</string>
+    <string name="title_activity_consulter">Consulter</string>
+    <string name="modifier">Modifier</string>
+    <string name="supprimer">Supprimer</string>
 
 </resources>
