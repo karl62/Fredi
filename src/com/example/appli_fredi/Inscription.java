@@ -2,6 +2,7 @@ package com.example.appli_fredi;
 
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,6 +37,8 @@ public class Inscription extends ActionBarActivity {
 	    			String uti = vitis.getUtilisateur().toString();
 	    			
 	    			Toast.makeText(Inscription.this, uti, Toast.LENGTH_LONG).show();
+	    			Intent intent = new Intent(Inscription.this, Fonctionnalites.class);
+	    			startActivity(intent);
 	    	 }
 	       });
 	
