@@ -22,7 +22,7 @@ public class BdSQLiteOpenHelper extends SQLiteOpenHelper{
 	public void onCreate(SQLiteDatabase db){
 		db.execSQL(requeteCreation);
 		
-		db.execSQL("INSERT INTO utilisateur(_id,nom,prenom,adresse) VALUES(1,'test','test','test');");
+		//db.execSQL("INSERT INTO utilisateur(_id,nom,prenom,adresse) VALUES(1,'test','test','test');");
 		
 		
 	}

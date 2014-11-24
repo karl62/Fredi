@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Inscription extends ActionBarActivity {
 	
@@ -32,6 +33,10 @@ public class Inscription extends ActionBarActivity {
 	    		 Utilisateurs unVitiTestAjout = new Utilisateurs(0,edtNom.getText().toString(),
 	    				edtPrenom.getText().toString() ,edtAdresse.getText().toString());
 	    			vitis.addViticulteur1(unVitiTestAjout);
+	    			
+	    			String uti = vitis.getUtilisateur().toString();
+	    			
+	    			Toast.makeText(Inscription.this, uti, Toast.LENGTH_LONG).show();
 	    	 }
 	       });
 	

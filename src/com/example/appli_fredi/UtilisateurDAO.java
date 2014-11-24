@@ -24,28 +24,16 @@ public class UtilisateurDAO{
 		bdd.execSQL(req);
 		bdd.close();
 	}
-	public long addViticulteur2(Utilisateurs unUti){
-		SQLiteDatabase bdd = accessBDD.getWritableDatabase();
-		ContentValues valeurs = new ContentValues();
-		valeurs.put("nom", unUti.getNom());
-		valeurs.put("prenom", unUti.getPrenom());
-		valeurs.put("adresse", unUti.getAdress());
-		
-		long resultat = bdd.insert("utilisateur", null, valeurs);
-		Log.d("Messages","resultat= "+resultat);
-		return resultat;
-		
-	}
-	public Utilisateurs getViticulteur(long id){
+
+	public Utilisateurs getUtilisateur(){
 		Utilisateurs lUti = null;
-		Cursor curseur = accessBDD.getReadableDatabase().rawQuery("SELECT * FROM utilisateur" +
-				" where _id =?",
-				new String[]{ String.valueOf(id) } );
+		Cursor curseur = accessBDD.getReadableDatabase().rawQuery("SELECT * FROM utilisateur",null);
 		if(curseur.getCount()>0){
 			curseur.moveToFirst();
 			lUti = new Utilisateurs(curseur.getLong(0),curseur.getString(1),curseur.getString(2),curseur.getString(3));
 			
 		}
+	
 		return lUti;
 	}
 	
