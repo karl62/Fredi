@@ -1,9 +1,13 @@
 package com.example.appli_fredi;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class Fonctionnalites extends ActionBarActivity {
 
@@ -11,6 +15,17 @@ public class Fonctionnalites extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fonctionnalites);
+		final Button simulerButton = (Button) findViewById(R.id.btnSimuler);
+
+		// Code pour passer a une vue.
+		simulerButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent intent = new Intent(Fonctionnalites.this,
+						Simuler_montant.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	@Override
