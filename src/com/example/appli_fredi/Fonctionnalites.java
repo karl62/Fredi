@@ -38,6 +38,17 @@ public class Fonctionnalites extends ActionBarActivity {
 				startActivity(intent);
 			}
 		});
+		
+		final Button deplacementButton = (Button) findViewById(R.id.btnDeplacement);
+		// Code pour passer a une vue.
+				deplacementButton.setOnClickListener(new OnClickListener() {
+
+					public void onClick(View v) {
+						Intent intent = new Intent(Fonctionnalites.this,
+								EnregistrementDeplacement.class);
+						startActivity(intent);
+					}
+				});
 	}
 
 	@Override

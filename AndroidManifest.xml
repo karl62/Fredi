@@ -36,6 +36,7 @@
         </activity>
 <activity android:name=".Fonctionnalites" />
 <activity android:name=".Inscription" />
+<activity android:name=".EnregistrementDeplacement" />
 <activity android:name=".Consulter"></activity>
     </application>
 
