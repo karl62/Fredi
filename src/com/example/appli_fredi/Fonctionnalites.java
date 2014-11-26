@@ -21,7 +21,20 @@ public class Fonctionnalites extends ActionBarActivity {
 		simulerButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-				Intent intent = new Intent(Fonctionnalites.this,Simuler_montant.class);
+				Intent intent = new Intent(Fonctionnalites.this,
+						Simuler_montant.class);
+				startActivity(intent);
+			}
+		});
+
+		final Button consulterButton = (Button) findViewById(R.id.btnConsulter);
+		
+		// Code pour passer a une vue.
+		consulterButton.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				Intent intent = new Intent(Fonctionnalites.this,
+						Consulter.class);
 				startActivity(intent);
 			}
 		});
