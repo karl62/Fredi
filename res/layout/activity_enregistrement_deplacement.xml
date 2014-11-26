@@ -144,4 +144,13 @@
         android:layout_alignLeft="@+id/MtPeagetxt"
         android:text="Nb de nuités" />
 
+    <Button
+        android:id="@+id/btnEnregistrer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/NbNuiteNumber"
+        android:layout_alignTop="@+id/Associationtxt"
+        android:layout_toRightOf="@+id/AssociationEdit"
+        android:text="Enregist rer" />
+
 </RelativeLayout>

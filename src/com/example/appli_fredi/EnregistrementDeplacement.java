@@ -4,6 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.view.View.OnClickListener;
 
 public class EnregistrementDeplacement extends ActionBarActivity {
 
@@ -11,6 +15,21 @@ public class EnregistrementDeplacement extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_enregistrement_deplacement);
+		Button btnEnregistrer = (Button) findViewById(R.id.btnEnregistrer);
+		btnEnregistrer.setOnClickListener(new View.OnClickListener(){
+			public void onClick(View v) {
+				
+				 EditText edtAssoc = (EditText) findViewById(R.id.AssociationEdit);
+	    		 EditText edtDate = (EditText) findViewById(R.id.DateEdit);
+	    		 EditText edtMotif = (EditText) findViewById(R.id.MotifEdit);
+	    		 EditText edtIntituleTrajet = (EditText) findViewById(R.id.IntituleTrajetEdit);
+	    		 EditText edtNbKm = (EditText) findViewById(R.id.NbKmNumber);
+	    		 EditText edtMtPeage = (EditText) findViewById(R.id.MtPeageNumber);
+	    		 EditText edtNbRepas = (EditText) findViewById(R.id.NbRepasNumber);
+	    		 EditText edtNbNuites = (EditText) findViewById(R.id.NbNuiteNumber);
+	    		 
+			}
+			});
 	}
 
 	@Override
@@ -31,4 +50,5 @@ public class EnregistrementDeplacement extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
 }
