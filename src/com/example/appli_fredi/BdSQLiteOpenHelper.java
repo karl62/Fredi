@@ -11,9 +11,9 @@ public class BdSQLiteOpenHelper extends SQLiteOpenHelper {
 			+ "nom TEXT NOT NULL," + "prenom TEXT NOT NULL,"
 			+ "adresse TEXT NOT NULL);";
 
-	private String requeteCreation2 = "CREATE TABLE deplacements("
+	private String requeteCreation2 = "CREATE TABLE deplacement("
 			+ "_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"
-			+ "date DATETIME NOT NULL," + "motif TEXT NOT NULL,"
+			+ "date TEXT NOT NULL," + "motif TEXT NOT NULL,"
 			+ "intitule TEXT NOT NULL," + "nbKm DOUBLE NOT NULL,"
 			+ "montantPeage DOUBLE NOT NULL" + "nbRepas INTEGER NOT NULL"
 			+ "nbNuites INTEGER NOT NULL);";
