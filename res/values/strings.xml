@@ -21,5 +21,6 @@
     <string name="title_activity_consulter">Consulter</string>
     <string name="modifier">Modifier</string>
     <string name="supprimer">Supprimer</string>
+    <string name="title_activity_enregistrement_deplacement">EnregistrementDeplacement</string>
 
 </resources>
