@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class Consulter extends ActionBarActivity {
 
@@ -11,6 +12,7 @@ public class Consulter extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_consulter);
+		ListView laListeDesDeplacements = (ListView) findViewById(R.id.listViewDeplacements);
 	}
 
 	@Override
