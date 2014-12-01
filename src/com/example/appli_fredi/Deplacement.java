@@ -5,14 +5,16 @@ public class Deplacement {
 	private String date;
 	private String motif;
 	private String intitule;
-	private double nbKm;
-	private double montantPeage;
-	private int nbRepas;
-	private int nbNuites;
+	private String nbKm;
+	private String montantPeage;
+	private String nbRepas;
+	private String nbNuites;
+	private String association;
 
-	public Deplacement(long id, String date, String motif, String intitule,
-			double nbKm, double montantPeage, int nbRepas, int nbNuites) {
+	public Deplacement(long id, String association, String date, String motif, String intitule,
+			String nbKm, String montantPeage, String nbRepas, String nbNuites) {
 		this.id = id;
+		this.association = association;
 		this.date = date;
 		this.motif = motif;
 		this.intitule = intitule;
