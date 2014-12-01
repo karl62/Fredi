@@ -27,7 +27,10 @@ public class Deplacement {
 	public long getId() {
 		return this.id;
 	}
-
+    public String getAssociation()
+    {
+    	return this.association;
+    }
 	public void setId(long id) {
 		this.id = id;
 	}
@@ -57,35 +60,35 @@ public class Deplacement {
 		this.intitule = intitule;
 	}
 
-	public double getNbKm() {
+	public String getNbKm() {
 		return this.nbKm;
 	}
 
-	public void setNbKm(double nbKm) {
+	public void setNbKm(String nbKm) {
 		this.nbKm = nbKm;
 	}
 	
-	public double getMontantPeage() {
+	public String getMontantPeage() {
 		return this.montantPeage;
 	}
 
-	public void setMontantPeage(double montantPeage) {
+	public void setMontantPeage(String montantPeage) {
 		this.montantPeage = montantPeage;
 	}
 	
-	public int getNbRepas() {
+	public String getNbRepas() {
 		return this.nbRepas;
 	}
 
-	public void setNbRepas(int nbRepas) {
+	public void setNbRepas(String nbRepas) {
 		this.nbRepas = nbRepas;
 	}
 	
-	public int getNbNuites() {
+	public String getNbNuites() {
 		return this.nbNuites;
 	}
 
-	public void setNbNuites(int nbNuites) {
+	public void setNbNuites(String nbNuites) {
 		this.nbNuites = nbNuites;
 	}
 	

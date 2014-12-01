@@ -15,8 +15,11 @@ public class DeplacementDAO {
 
 	public void addDeplacement(Deplacement unDeplacement) {
 		SQLiteDatabase bdd = accessBDD.getWritableDatabase();
-		String req = "INSERT INTO deplacement(date,motif,intitule,nbKm,montantPeage,nbRepas,nbNuites)"
+		String req = "INSERT INTO deplacement(association,date,motif,intitule,nbKm,montantPeage,nbRepas,nbNuites)"
 				+ " VALUES('"
+				+ unDeplacement.getAssociation()
+				+ "'"
+				+ ",'"
 				+ unDeplacement.getDate()
 				+ "'"
 				+ ", '"
@@ -50,8 +53,8 @@ public class DeplacementDAO {
 			curseur.moveToFirst();
 			unDeplacement = new Deplacement(curseur.getLong(0),
 					curseur.getString(1), curseur.getString(2),
-					curseur.getString(3), curseur.getDouble(4),
-					curseur.getDouble(5), curseur.getInt(6), curseur.getInt(7));
+					curseur.getString(3), curseur.getString(4),
+					curseur.getString(5), curseur.getString(6), curseur.getString(7), curseur.getString(8));
 
 		}
 
