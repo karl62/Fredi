@@ -1,7 +1,7 @@
 package com.example.appli_fredi;
 
 public class Deplacement {
-	private long id;
+	private long _id;
 	private String date;
 	private String motif;
 	private String intitule;
@@ -13,7 +13,7 @@ public class Deplacement {
 
 	public Deplacement(long id, String association, String date, String motif, String intitule,
 			String nbKm, String montantPeage, String nbRepas, String nbNuites) {
-		this.id = id;
+		this._id = id;
 		this.association = association;
 		this.date = date;
 		this.motif = motif;
@@ -25,14 +25,14 @@ public class Deplacement {
 	}
 
 	public long getId() {
-		return this.id;
+		return this._id;
 	}
     public String getAssociation()
     {
     	return this.association;
     }
 	public void setId(long id) {
-		this.id = id;
+		this._id = id;
 	}
 
 	public String getDate() {

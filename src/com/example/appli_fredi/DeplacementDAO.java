@@ -1,5 +1,7 @@
 package com.example.appli_fredi;
 
+import java.util.ArrayList;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,11 +17,9 @@ public class DeplacementDAO {
 
 	public void addDeplacement(Deplacement unDeplacement) {
 		SQLiteDatabase bdd = accessBDD.getWritableDatabase();
-		String req = "INSERT INTO deplacement(association,date,motif,intitule,nbKm,montantPeage,nbRepas,nbNuites)"
+		String req = "INSERT INTO deplacement(date,motif,intitule,nbKm,montantPeage,nbRepas,nbNuites,association)"
 				+ " VALUES('"
-				+ unDeplacement.getAssociation()
-				+ "'"
-				+ ",'"
+				
 				+ unDeplacement.getDate()
 				+ "'"
 				+ ", '"
@@ -38,27 +38,42 @@ public class DeplacementDAO {
 				+ unDeplacement.getNbRepas()
 				+ "'"
 				+ ", '"
-				+ unDeplacement.getNbNuites() + "');";
+				+ unDeplacement.getNbNuites()
+				+ "'"
+				+ ",'"
+				+ unDeplacement.getAssociation()+ "');";
 
 		Log.d("Messages", req);
 		bdd.execSQL(req);
 		bdd.close();
 	}
 
-	public Deplacement getDeplacement() {
-		Deplacement unDeplacement = null;
+	public ArrayList<Deplacement> getDeplacementsAsList() {
+		ArrayList<Deplacement> lesDeplacements = new ArrayList<Deplacement>();
 		Cursor curseur = accessBDD.getReadableDatabase().rawQuery(
 				"SELECT * FROM deplacement", null);
-		if (curseur.getCount() > 0) {
-			curseur.moveToFirst();
-			unDeplacement = new Deplacement(curseur.getLong(0),
+		curseur.moveToFirst();
+		while (!curseur.isAfterLast()){
+			
+			Deplacement leDeplacement = new Deplacement(curseur.getLong(0),
 					curseur.getString(1), curseur.getString(2),
 					curseur.getString(3), curseur.getString(4),
-					curseur.getString(5), curseur.getString(6), curseur.getString(7), curseur.getString(8));
+					curseur.getString(5), curseur.getString(6),
+					curseur.getString(7), curseur.getString(8));
+			lesDeplacements.add(leDeplacement);
+			curseur.moveToNext();
 
 		}
 
-		return unDeplacement;
+		return lesDeplacements;
+	}
+
+	public Cursor getDeplacementsAsCursor() {
+		ArrayList<Deplacement> lesDeplacements = new ArrayList<Deplacement>();
+		Cursor curseur = accessBDD.getReadableDatabase().rawQuery(
+				"SELECT * FROM deplacement", null);
+
+		return curseur;
 	}
 
 }

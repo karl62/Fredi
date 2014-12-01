@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.view.View.OnClickListener;
 
 public class EnregistrementDeplacement extends ActionBarActivity {
-    DeplacementDAO unDeplacement = new DeplacementDAO (this);
+    DeplacementDAO unDepla = new DeplacementDAO (this);
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,7 +29,8 @@ public class EnregistrementDeplacement extends ActionBarActivity {
 	    		 EditText edtNbNuites = (EditText) findViewById(R.id.NbNuiteNumber);
 	    		  Deplacement unDeplacement = new Deplacement (0, edtAssoc.getText().toString(), edtDate.getText().toString(), edtMotif.getText().toString(), edtIntituleTrajet.getText().toString(),
 	    		  edtNbKm.getText().toString(), edtMtPeage.getText().toString(), edtNbRepas.getText().toString(), edtNbNuites.getText().toString());
-			}
+	    		  unDepla.addDeplacement(unDeplacement);
+	    		  }
 			});
 	}
 

@@ -15,8 +15,9 @@ public class BdSQLiteOpenHelper extends SQLiteOpenHelper {
 			+ "_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,"
 			+ "date TEXT NOT NULL," + "motif TEXT NOT NULL,"
 			+ "intitule TEXT NOT NULL," + "nbKm DOUBLE NOT NULL,"
-			+ "montantPeage DOUBLE NOT NULL" + "nbRepas INTEGER NOT NULL"
-			+ "nbNuites INTEGER NOT NULL);";
+			+ "montantPeage DOUBLE NOT NULL," + "nbRepas INTEGER NOT NULL,"
+			+ "nbNuites INTEGER NOT NULL,"
+			+ "association TEXT NOT NULL);";
 
 	public BdSQLiteOpenHelper(Context context, String name,
 			CursorFactory factory, int version) {
