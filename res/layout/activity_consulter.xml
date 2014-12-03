@@ -13,24 +13,39 @@
     <ListView
         android:id="@+id/listViewDeplacements"
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="204dp" >
+        android:layout_height="172dp"
+        android:layout_weight="0.17" >
     </ListView>
+
+    <TextView
+        android:id="@+id/txtConcerne"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:text="Id concerné:" />
+
+    <EditText
+        android:id="@+id/editSupp"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:ems="10"
+        android:visibility="visible" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/btnModifier"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_weight="1"
         android:text="@string/modifier" />
 
     <Button
         android:id="@+id/btnSupprimer"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="38dp"
         android:layout_gravity="center"
-        android:layout_weight="1"
         android:text="@string/supprimer" />
 
 </LinearLayout>

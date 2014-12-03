@@ -76,4 +76,21 @@ public class DeplacementDAO {
 		return curseur;
 	}
 
+	public void SuppDeplacement(int id){
+		
+		SQLiteDatabase bdd = accessBDD.getWritableDatabase();
+		String req = "DELETE FROM deplacement where _id ="+ id;
+		Log.d("Messages", req);
+		bdd.execSQL(req);
+		bdd.close();
+	
+	}
+	public void ModifDeplacement(String newIntitule, int id){
+		SQLiteDatabase bdd = accessBDD.getWritableDatabase();
+		String req = "UPDATE deplacement SET intitule = newIntitule where _id="+id ;
+		Log.d("Messages", req);
+		bdd.execSQL(req);
+		bdd.close();
+		
+	}
 }

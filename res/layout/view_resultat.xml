@@ -4,14 +4,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/txtId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/editId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
 
-    <TextView
-        android:id="@+id/txtIntitule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editIntitule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
 
 </LinearLayout>
