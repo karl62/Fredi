@@ -40,14 +40,14 @@ public class Consulter extends ActionBarActivity {
 
 				if (supp.equals("")) {
 					Toast.makeText(Consulter.this,
-							"Veuillez saisir un id d'un déplacement",
+							"Veuillez saisir l'id d'un déplacement",
 							Toast.LENGTH_LONG).show();
 
 				} else {
 
 					unDepla.SuppDeplacement(Integer.parseInt(edtSupp.getText()
 							.toString()));
-					Toast.makeText(Consulter.this, "Suppresion ok ",
+					Toast.makeText(Consulter.this, "Suppression effectuée ",
 							Toast.LENGTH_LONG).show();
 					Intent intent = new Intent(Consulter.this,
 							Fonctionnalites.class);
