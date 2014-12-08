@@ -1,12 +1,14 @@
 package com.example.appli_fredi;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class EnregistrementDeplacement extends ActionBarActivity {
 	DeplacementDAO unDepla = new DeplacementDAO(this);
@@ -27,14 +29,36 @@ public class EnregistrementDeplacement extends ActionBarActivity {
 				EditText edtMtPeage = (EditText) findViewById(R.id.MtPeageNumber);
 				EditText edtNbRepas = (EditText) findViewById(R.id.NbRepasNumber);
 				EditText edtNbNuites = (EditText) findViewById(R.id.NbNuiteNumber);
-				Deplacement unDeplacement = new Deplacement(0, edtAssoc
-						.getText().toString(), edtDate.getText().toString(),
-						edtMotif.getText().toString(), edtIntituleTrajet
-								.getText().toString(), edtNbKm.getText()
-								.toString(), edtMtPeage.getText().toString(),
-						edtNbRepas.getText().toString(), edtNbNuites.getText()
-								.toString());
-				unDepla.addDeplacement(unDeplacement);
+
+				String assoc = edtAssoc.getText().toString();
+				String date = edtDate.getText().toString();
+				String motif = edtMotif.getText().toString();
+				String intituleTrajet = edtIntituleTrajet.getText().toString();
+				String nbKm = edtNbKm.getText().toString();
+				String mtPeage = edtMtPeage.getText().toString();
+				String nbRepas = edtNbRepas.getText().toString();
+				String nbNuites = edtNbNuites.getText().toString();
+
+				if (assoc.isEmpty() || date.isEmpty() || motif.isEmpty()
+						|| intituleTrajet.isEmpty() || nbKm.isEmpty()
+						|| mtPeage.isEmpty() || nbRepas.isEmpty()
+						|| nbNuites.isEmpty()) {
+					Toast.makeText(EnregistrementDeplacement.this,
+							"Veuillez renseigner tous les champs !",
+							Toast.LENGTH_LONG).show();
+				} else {
+					Deplacement unDeplacement = new Deplacement(0, assoc, date,
+							motif, intituleTrajet, nbKm, mtPeage, nbRepas,
+							nbNuites);
+
+					unDepla.addDeplacement(unDeplacement);
+					Toast.makeText(EnregistrementDeplacement.this,
+							"Déplacement ajouté avec succès !",
+							Toast.LENGTH_LONG).show();
+					Intent intent = new Intent(EnregistrementDeplacement.this,
+							Fonctionnalites.class);
+					startActivity(intent);
+				}
 			}
 		});
 	}
@@ -56,6 +80,10 @@ public class EnregistrementDeplacement extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	private boolean isEmpty(EditText myeditText) {
+		return myeditText.getText().toString().trim().length() == 0;
 	}
 
 }
