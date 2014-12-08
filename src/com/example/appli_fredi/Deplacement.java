@@ -11,8 +11,9 @@ public class Deplacement {
 	private String nbNuites;
 	private String association;
 
-	public Deplacement(long id, String association, String date, String motif, String intitule,
-			String nbKm, String montantPeage, String nbRepas, String nbNuites) {
+	public Deplacement(long id, String association, String date, String motif,
+			String intitule, String nbKm, String montantPeage, String nbRepas,
+			String nbNuites) {
 		this._id = id;
 		this.association = association;
 		this.date = date;
@@ -27,10 +28,11 @@ public class Deplacement {
 	public long getId() {
 		return this._id;
 	}
-    public String getAssociation()
-    {
-    	return this.association;
-    }
+
+	public String getAssociation() {
+		return this.association;
+	}
+
 	public void setId(long id) {
 		this._id = id;
 	}
@@ -67,7 +69,7 @@ public class Deplacement {
 	public void setNbKm(String nbKm) {
 		this.nbKm = nbKm;
 	}
-	
+
 	public String getMontantPeage() {
 		return this.montantPeage;
 	}
@@ -75,7 +77,7 @@ public class Deplacement {
 	public void setMontantPeage(String montantPeage) {
 		this.montantPeage = montantPeage;
 	}
-	
+
 	public String getNbRepas() {
 		return this.nbRepas;
 	}
@@ -83,7 +85,7 @@ public class Deplacement {
 	public void setNbRepas(String nbRepas) {
 		this.nbRepas = nbRepas;
 	}
-	
+
 	public String getNbNuites() {
 		return this.nbNuites;
 	}
@@ -91,10 +93,12 @@ public class Deplacement {
 	public void setNbNuites(String nbNuites) {
 		this.nbNuites = nbNuites;
 	}
-	
+
 	public String toString() {
 		return "Déplacement [ date=" + date + ", motif=" + motif
-				+ ", intitule=" + intitule + ", nbKm=" + nbKm + ", montantPeage=" + montantPeage + ", nbRepas=" + nbRepas + ", nbNuites=" + nbNuites + "]";
+				+ ", intitule=" + intitule + ", nbKm=" + nbKm
+				+ ", montantPeage=" + montantPeage + ", nbRepas=" + nbRepas
+				+ ", nbNuites=" + nbNuites + "]";
 	}
 
 }

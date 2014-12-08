@@ -1,6 +1,5 @@
 package com.example.appli_fredi;
 
-
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,36 +12,36 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Inscription extends ActionBarActivity {
-	
+
 	UtilisateurDAO vitis = new UtilisateurDAO(this);
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_inscription);
-		
-		
-		
+
 		Button btnValider = (Button) findViewById(R.id.btnValider);
 
-	   btnValider.setOnClickListener(new OnClickListener() {
-    	   
-	    	 public void onClick(View v){
-	    		 EditText edtNom = (EditText) findViewById(R.id.editTextIdentifiant);
-	    		 EditText edtPrenom = (EditText) findViewById(R.id.edtPrenom);
-	    		 EditText edtAdresse = (EditText) findViewById(R.id.edtAdresse);
-	    		 Utilisateurs unVitiTestAjout = new Utilisateurs(0,edtNom.getText().toString(),
-	    				edtPrenom.getText().toString() ,edtAdresse.getText().toString());
-	    			vitis.addViticulteur1(unVitiTestAjout);
-	    			
-	    			String uti = vitis.getUtilisateur().toString();
-	    			
-	    			Toast.makeText(Inscription.this, uti, Toast.LENGTH_LONG).show();
-	    			Intent intent = new Intent(Inscription.this, Fonctionnalites.class);
-	    			startActivity(intent);
-	    	 }
-	       });
-	
-	
+		btnValider.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				EditText edtNom = (EditText) findViewById(R.id.editTextIdentifiant);
+				EditText edtPrenom = (EditText) findViewById(R.id.edtPrenom);
+				EditText edtAdresse = (EditText) findViewById(R.id.edtAdresse);
+				Utilisateurs unVitiTestAjout = new Utilisateurs(0, edtNom
+						.getText().toString(), edtPrenom.getText().toString(),
+						edtAdresse.getText().toString());
+				vitis.addViticulteur1(unVitiTestAjout);
+
+				String uti = vitis.getUtilisateur().toString();
+
+				Toast.makeText(Inscription.this, uti, Toast.LENGTH_LONG).show();
+				Intent intent = new Intent(Inscription.this,
+						Fonctionnalites.class);
+				startActivity(intent);
+			}
+		});
+
 	}
 
 	@Override

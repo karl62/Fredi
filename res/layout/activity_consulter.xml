@@ -35,13 +35,6 @@
     </EditText>
 
     <Button
-        android:id="@+id/btnModifier"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/modifier" />
-
-    <Button
         android:id="@+id/btnSupprimer"
         android:layout_width="fill_parent"
         android:layout_height="38dp"

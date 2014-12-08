@@ -28,7 +28,7 @@ public class Fonctionnalites extends ActionBarActivity {
 		});
 
 		final Button consulterButton = (Button) findViewById(R.id.btnConsulter);
-		
+
 		// Code pour passer a une vue.
 		consulterButton.setOnClickListener(new OnClickListener() {
 
@@ -38,17 +38,17 @@ public class Fonctionnalites extends ActionBarActivity {
 				startActivity(intent);
 			}
 		});
-		
+
 		final Button deplacementButton = (Button) findViewById(R.id.btnDeplacement);
 		// Code pour passer a une vue.
-				deplacementButton.setOnClickListener(new OnClickListener() {
+		deplacementButton.setOnClickListener(new OnClickListener() {
 
-					public void onClick(View v) {
-						Intent intent = new Intent(Fonctionnalites.this,
-								EnregistrementDeplacement.class);
-						startActivity(intent);
-					}
-				});
+			public void onClick(View v) {
+				Intent intent = new Intent(Fonctionnalites.this,
+						EnregistrementDeplacement.class);
+				startActivity(intent);
+			}
+		});
 	}
 
 	@Override

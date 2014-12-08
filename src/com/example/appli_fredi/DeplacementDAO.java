@@ -19,7 +19,7 @@ public class DeplacementDAO {
 		SQLiteDatabase bdd = accessBDD.getWritableDatabase();
 		String req = "INSERT INTO deplacement(date,motif,intitule,nbKm,montantPeage,nbRepas,nbNuites,association)"
 				+ " VALUES('"
-				
+
 				+ unDeplacement.getDate()
 				+ "'"
 				+ ", '"
@@ -41,7 +41,7 @@ public class DeplacementDAO {
 				+ unDeplacement.getNbNuites()
 				+ "'"
 				+ ",'"
-				+ unDeplacement.getAssociation()+ "');";
+				+ unDeplacement.getAssociation() + "');";
 
 		Log.d("Messages", req);
 		bdd.execSQL(req);
@@ -53,8 +53,8 @@ public class DeplacementDAO {
 		Cursor curseur = accessBDD.getReadableDatabase().rawQuery(
 				"SELECT * FROM deplacement", null);
 		curseur.moveToFirst();
-		while (!curseur.isAfterLast()){
-			
+		while (!curseur.isAfterLast()) {
+
 			Deplacement leDeplacement = new Deplacement(curseur.getLong(0),
 					curseur.getString(1), curseur.getString(2),
 					curseur.getString(3), curseur.getString(4),
@@ -69,28 +69,29 @@ public class DeplacementDAO {
 	}
 
 	public Cursor getDeplacementsAsCursor() {
-		ArrayList<Deplacement> lesDeplacements = new ArrayList<Deplacement>();
 		Cursor curseur = accessBDD.getReadableDatabase().rawQuery(
 				"SELECT * FROM deplacement", null);
 
 		return curseur;
 	}
 
-	public void SuppDeplacement(int id){
-		
+	public void SuppDeplacement(int id) {
+
 		SQLiteDatabase bdd = accessBDD.getWritableDatabase();
-		String req = "DELETE FROM deplacement where _id ="+ id;
+		String req = "DELETE FROM deplacement where _id =" + id;
 		Log.d("Messages", req);
 		bdd.execSQL(req);
 		bdd.close();
-	
+
 	}
-	public void ModifDeplacement(String newIntitule, int id){
+
+	public void ModifDeplacement(String newIntitule, int id) {
 		SQLiteDatabase bdd = accessBDD.getWritableDatabase();
-		String req = "UPDATE deplacement SET intitule = newIntitule where _id="+id ;
+		String req = "UPDATE deplacement SET intitule = newIntitule where _id="
+				+ id;
 		Log.d("Messages", req);
 		bdd.execSQL(req);
 		bdd.close();
-		
+
 	}
 }

@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 
 public class MainActivity_Appli_Fredi extends ActionBarActivity {
 
@@ -15,16 +12,16 @@ public class MainActivity_Appli_Fredi extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_activity__appli__fredi);
-		
+
 		UtilisateurDAO vitis = new UtilisateurDAO(this);
-		
-		if (vitis.getUtilisateur() == null)
-		{
-			Intent intent = new Intent(MainActivity_Appli_Fredi.this, Inscription.class);
+
+		if (vitis.getUtilisateur() == null) {
+			Intent intent = new Intent(MainActivity_Appli_Fredi.this,
+					Inscription.class);
 			startActivity(intent);
-		}
-		else{
-			Intent intent = new Intent(MainActivity_Appli_Fredi.this, Fonctionnalites.class);
+		} else {
+			Intent intent = new Intent(MainActivity_Appli_Fredi.this,
+					Fonctionnalites.class);
 			startActivity(intent);
 		}
 	}
